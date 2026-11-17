@@ -1,0 +1,6 @@
+{
+  "name": "BIOVIA — Virtual Biology Lab",
+  "description": "Platform pembelajaran biologi interaktif dengan katalog materi, eksplorasi terstruktur, dan kuis pemahaman.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

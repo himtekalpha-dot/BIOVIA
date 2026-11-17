@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detail Materi | BIOVIA</title>
+
+    <link rel="stylesheet" href="detail.css">
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="topbar">
+
+        <div class="topbar-left">
+
+            <a href="index.html" class="brand">
+                <div class="brand-icon">🧬</div>
+
+                <div>
+                    <h2>BIOVIA</h2>
+                    <span>Biology Virtual Interactive Application</span>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="topbar-right">
+
+            <a href="jelajahi.html" class="back-button">
+                ← Kembali ke Materi
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-container">
+
+        <!-- BREADCRUMB -->
+        <div class="breadcrumb">
+
+            <a href="index.html">Beranda</a>
+
+            <span>/</span>
+
+            <a href="jelajahi.html">Jelajahi Materi</a>
+
+            <span>/</span>
+
+            <span id="breadcrumbTitle">Detail Materi</span>
+
+        </div>
+
+
+        <!-- HERO MATERI -->
+        <section class="detail-hero">
+
+            <div class="hero-content">
+
+                <span class="category-label" id="categoryLabel">
+                    BIOLOGI MANUSIA
+                </span>
+
+                <h1 id="materialTitle">
+                    Memuat Materi...
+                </h1>
+
+                <p id="materialDescription">
+                    Silakan tunggu, materi sedang dimuat.
+                </p>
+
+                <div class="material-information">
+
+                    <span>📚 IPA Biologi</span>
+
+                    <span>⏱ <span id="duration">12 menit</span></span>
+
+                    <span>🎓 SMP</span>
+
+                </div>
+
+            </div>
+
+            <div class="hero-illustration">
+
+                <div class="illustration-circle">
+
+                    <span id="materialEmoji">🫁</span>
+
+                </div>
+
+                <div class="floating-badge">
+                    BIOVIA LEARNING
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TUJUAN PEMBELAJARAN -->
+        <section class="content-card objective-card">
+
+            <div class="section-heading">
+
+                <div class="section-icon">🎯</div>
+
+                <div>
+                    <span class="section-subtitle">TARGET BELAJAR</span>
+                    <h2>Tujuan Pembelajaran</h2>
+                </div>
+
+            </div>
+
+            <p class="section-description">
+                Setelah mempelajari materi ini, kamu diharapkan mampu:
+            </p>
+
+            <ul id="objectiveList" class="objective-list"></ul>
+
+        </section>
+
+
+        <!-- MATERI PEMBELAJARAN -->
+        <section class="learning-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">📖</div>
+
+                <div>
+                    <span class="section-subtitle">MATERI PEMBELAJARAN</span>
+                    <h2>Yuk, Mulai Belajar!</h2>
+                </div>
+
+            </div>
+
+            <div id="lessonContent"></div>
+
+        </section>
+
+
+        <!-- BAGIAN DAN FUNGSI -->
+        <section class="content-card">
+
+            <div class="section-heading">
+
+                <div class="section-icon">🔬</div>
+
+                <div>
+                    <span class="section-subtitle">EKSPLORASI ILMU</span>
+                    <h2>Bagian dan Fungsinya</h2>
+                </div>
+
+            </div>
+
+            <p class="section-description">
+                Kenali bagian-bagian penting dalam materi yang sedang kamu pelajari.
+            </p>
+
+            <div class="parts-grid" id="partsGrid"></div>
+
+        </section>
+
+
+        <!-- RINGKASAN -->
+        <section class="summary-card">
+
+            <div class="summary-icon">💡</div>
+
+            <div>
+
+                <span class="section-subtitle">INGAT KEMBALI</span>
+
+                <h2>Kesimpulan Materi</h2>
+
+                <p id="summaryText"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- KUIS -->
+        <section class="quiz-section">
+
+            <div class="section-heading">
+
+                <div class="section-icon">🧠</div>
+
+                <div>
+                    <span class="section-subtitle">UJI PEMAHAMAN</span>
+                    <h2>Seberapa Paham Kamu?</h2>
+                </div>
+
+            </div>
+
+            <p class="section-description">
+                Jawab pertanyaan berikut untuk menguji pemahamanmu.
+            </p>
+
+            <div id="quizContainer"></div>
+
+            <div class="quiz-footer">
+
+                <button id="submitQuiz" class="primary-button">
+                    Periksa Jawaban →
+                </button>
+
+                <button id="retryQuiz" class="secondary-button" hidden>
+                    Ulangi Kuis
+                </button>
+
+            </div>
+
+            <div id="quizResult" class="quiz-result" hidden></div>
+
+        </section>
+
+
+        <!-- NAVIGASI -->
+        <section class="bottom-navigation">
+
+            <a href="jelajahi.html" class="secondary-button">
+                ← Materi Lainnya
+            </a>
+
+            <button class="primary-button" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                Kembali ke Atas ↑
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-brand">
+            🧬 BIOVIA
+        </div>
+
+        <p>
+            Belajar Biologi Lebih Menarik, Interaktif, dan Menyenangkan.
+        </p>
+
+        <span>© 2026 BIOVIA Learning Platform</span>
+
+    </footer>
+
+
+    <script src="detail.js"></script>
+
+</body>
+</html>

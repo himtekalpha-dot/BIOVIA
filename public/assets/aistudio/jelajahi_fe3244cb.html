@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b50">
+  <title>BIOVIA — Jelajahi Materi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="jelajahi.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html" aria-label="BIOVIA beranda">
+      <span class="brand-mark"><span class="brand-dot"></span><span class="brand-leaf">✳</span></span>
+      <span class="brand-name">BIO<span>VIA</span><small>VIRTUAL BIOLOGY LAB</small></span>
+    </a>
+    <div class="nav-caption">MENU UTAMA</div>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a class="nav-link" href="index.html"><span class="nav-icon">⌂</span><span>Dashboard</span></a>
+      <a class="nav-link" href="jelajahi.html"><span class="nav-icon">▤</span><span>Jelajahi Materi</span></a>
+      <a class="nav-link" href="#" data-coming="Laboratorium 3D"><span class="nav-icon">◉</span><span>Laboratorium 3D</span><span class="nav-arrow">›</span></a>
+      <a class="nav-link" href="#" data-coming="Simulasi"><span class="nav-icon">⌁</span><span>Simulasi</span></a>
+      <a class="nav-link" href="#" data-coming="Game Edukasi"><span class="nav-icon">▣</span><span>Game Edukasi</span><span class="nav-badge">4</span></a>
+      <a class="nav-link" href="#" data-coming="Kuis & Evaluasi"><span class="nav-icon">☷</span><span>Kuis & Evaluasi</span></a>
+    </nav>
+    <div class="nav-caption second-caption">PERSONAL</div>
+    <nav class="main-nav">
+      <a class="nav-link" href="#" data-coming="Progres Belajar"><span class="nav-icon">◴</span><span>Progres Belajar</span></a>
+      <a class="nav-link" href="#" data-coming="Pencapaian"><span class="nav-icon">◇</span><span>Pencapaian</span></a>
+      <a class="nav-link" href="#" data-coming="Profil Saya"><span class="nav-icon">♙</span><span>Profil Saya</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><div class="help-orbit">✦</div><strong>Butuh bantuan belajar?</strong><p>Tanyakan apa saja kepada BIOVIA AI Tutor.</p><button class="help-button" data-coming="BIOVIA AI Tutor">Tanya AI Tutor <span>↗</span></button></div>
+      <div class="sidebar-foot"><span class="status-dot"></span> BIOVIA v1.0 <span>•</span> Belajar jadi seru</div>
+    </div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu" aria-label="Buka navigasi">☰</button>
+      <div class="breadcrumb"><a href="index.html">Dashboard</a><b>/</b><strong>Jelajahi Materi</strong></div>
+      <div class="top-actions">
+        <label class="search-box"><span>⌕</span><input id="globalSearch" type="search" placeholder="Cari materi atau topik..." aria-label="Cari materi"><kbd>⌘ K</kbd></label>
+        <button class="icon-button notification-button" aria-label="Notifikasi" data-coming="Notifikasi">♧<i></i></button>
+        <div class="profile-mini"><div class="avatar">S</div><div class="profile-text"><strong>Siswa BIOVIA</strong><span>Pelajar</span></div><span class="profile-chevron">⌄</span></div>
+      </div>
+    </header>
+
+    <div class="content">
+      <section class="page-intro">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> PERPUSTAKAAN BIOLOGI INTERAKTIF</div>
+          <h1>Jelajahi Dunia <span>Kehidupan.</span></h1>
+          <p class="welcome-copy">Pilih kategori, temukan materi, dan pelajari bagaimana makhluk hidup bekerja.</p>
+        </div>
+        <div class="intro-chip"><span>✦</span> Belajar sesuai rasa ingin tahumu</div>
+      </section>
+
+      <section class="explore-hero">
+        <div class="explore-hero-copy">
+          <span class="hero-label">YOUR BIOLOGY JOURNEY STARTS HERE</span>
+          <h2>Setiap makhluk hidup<br>punya cerita menarik.</h2>
+          <p>Dari organ tubuh manusia hingga sel mikroskopis, temukan struktur dan fungsi kehidupan dengan cara yang lebih seru.</p>
+          <div class="hero-pills"><span>📚 Materi ringkas</span><span>🔬 Eksplorasi</span><span>🧩 Tantangan</span></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+          <div class="hero-planet">🧬</div><span class="hero-float float-a">✦</span><span class="hero-float float-b">＋</span>
+          <div class="hero-note">DISCOVER · LEARN · EXPLORE</div>
+        </div>
+      </section>
+
+      <section class="filter-section" aria-label="Filter materi">
+        <div class="filter-heading"><div><div class="eyebrow small-eyebrow">PILIH AREA EKSPLORASI</div><h2>Semua Materi</h2></div><span class="result-count" id="resultCount">12 materi tersedia</span></div>
+        <div class="filter-bar">
+          <div class="category-filters" id="categoryFilters">
+            <button class="filter-chip active" data-filter="all">Semua <span>12</span></button>
+            <button class="filter-chip" data-filter="manusia">🧍 Manusia</button>
+            <button class="filter-chip" data-filter="hewan">🐾 Hewan</button>
+            <button class="filter-chip" data-filter="tumbuhan">🌿 Tumbuhan</button>
+            <button class="filter-chip" data-filter="sel">🔬 Sel & Mikroorganisme</button>
+          </div>
+          <label class="material-search"><span>⌕</span><input id="materialSearch" type="search" placeholder="Cari topik, misalnya paru-paru..."></label>
+        </div>
+      </section>
+
+      <section class="material-grid" id="materialGrid">
+        <article class="material-card" data-category="manusia" data-title="Sistem Pernapasan Manusia" data-keywords="paru-paru hidung trakea bronkus alveolus oksigen karbon dioksida">
+          <div class="card-art art-lungs"><span class="art-emoji">🫁</span><span class="art-label">HUMAN SYSTEM</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-human">BIOLOGI MANUSIA</span><span class="level-tag">Kelas 8</span></div><h3>Sistem Pernapasan Manusia</h3><p>Telusuri perjalanan udara dan proses pertukaran gas di paru-paru.</p><div class="card-bottom"><span>⏱ 12 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="manusia" data-title="Sistem Peredaran Darah" data-keywords="jantung darah pembuluh arteri vena kapiler">
+          <div class="card-art art-heart"><span class="art-emoji">❤️</span><span class="art-label">HUMAN SYSTEM</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-human">BIOLOGI MANUSIA</span><span class="level-tag">Kelas 8</span></div><h3>Sistem Peredaran Darah</h3><p>Kenali jantung, pembuluh darah, dan perjalanan darah ke seluruh tubuh.</p><div class="card-bottom"><span>⏱ 15 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="manusia" data-title="Sistem Pencernaan Manusia" data-keywords="mulut kerongkongan lambung usus halus usus besar enzim">
+          <div class="card-art art-digest"><span class="art-emoji">🥣</span><span class="art-label">HUMAN SYSTEM</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-human">BIOLOGI MANUSIA</span><span class="level-tag">Kelas 8</span></div><h3>Sistem Pencernaan Manusia</h3><p>Ikuti proses makanan diolah menjadi zat gizi yang dibutuhkan tubuh.</p><div class="card-bottom"><span>⏱ 14 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="manusia" data-title="Sistem Ekskresi Manusia" data-keywords="ginjal kulit paru-paru hati urine">
+          <div class="card-art art-kidney"><span class="art-emoji">🫘</span><span class="art-label">HUMAN SYSTEM</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-human">BIOLOGI MANUSIA</span><span class="level-tag">Kelas 8</span></div><h3>Sistem Ekskresi Manusia</h3><p>Pelajari cara tubuh membuang zat sisa melalui organ ekskresi.</p><div class="card-bottom"><span>⏱ 11 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="hewan" data-title="Sistem Pernapasan Ikan" data-keywords="insang filamen lamela oksigen air">
+          <div class="card-art art-fish"><span class="art-emoji">🐟</span><span class="art-label">ANIMAL BIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-animal">BIOLOGI HEWAN</span><span class="level-tag">Kelas 8</span></div><h3>Sistem Pernapasan Ikan</h3><p>Temukan bagaimana insang membantu ikan mengambil oksigen dari air.</p><div class="card-bottom"><span>⏱ 9 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="hewan" data-title="Pencernaan Hewan Ruminansia" data-keywords="sapi kambing rumen retikulum omasum abomasum">
+          <div class="card-art art-cow"><span class="art-emoji">🐄</span><span class="art-label">ANIMAL BIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-animal">BIOLOGI HEWAN</span><span class="level-tag">Kelas 8</span></div><h3>Pencernaan Hewan Ruminansia</h3><p>Pahami keunikan lambung berkompartemen pada sapi dan kambing.</p><div class="card-bottom"><span>⏱ 13 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="hewan" data-title="Rangka dan Gerak Burung" data-keywords="burung tulang sayap otot terbang">
+          <div class="card-art art-bird"><span class="art-emoji">🕊️</span><span class="art-label">ANIMAL BIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-animal">BIOLOGI HEWAN</span><span class="level-tag">Kelas 8</span></div><h3>Rangka dan Gerak Burung</h3><p>Kenali adaptasi tulang dan otot yang mendukung kemampuan terbang.</p><div class="card-bottom"><span>⏱ 10 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="tumbuhan" data-title="Struktur Akar dan Fungsinya" data-keywords="akar rambut akar xilem floem penyerapan air">
+          <div class="card-art art-roots"><span class="art-emoji">🌱</span><span class="art-label">PLANT BIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-plant">BIOLOGI TUMBUHAN</span><span class="level-tag">Kelas 8</span></div><h3>Struktur Akar dan Fungsinya</h3><p>Pelajari bagian akar dan perannya menyerap air serta mineral.</p><div class="card-bottom"><span>⏱ 10 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="tumbuhan" data-title="Fotosintesis pada Tumbuhan" data-keywords="klorofil kloroplas cahaya matahari karbon dioksida glukosa">
+          <div class="card-art art-leaf"><span class="art-emoji">🍃</span><span class="art-label">PLANT BIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-plant">BIOLOGI TUMBUHAN</span><span class="level-tag">Kelas 8</span></div><h3>Fotosintesis pada Tumbuhan</h3><p>Ungkap cara tumbuhan membuat makanan dengan bantuan cahaya.</p><div class="card-bottom"><span>⏱ 12 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="tumbuhan" data-title="Transportasi pada Tumbuhan" data-keywords="xilem floem air mineral hasil fotosintesis batang">
+          <div class="card-art art-stem"><span class="art-emoji">🌿</span><span class="art-label">PLANT BIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-plant">BIOLOGI TUMBUHAN</span><span class="level-tag">Kelas 8</span></div><h3>Transportasi pada Tumbuhan</h3><p>Ikuti perjalanan air dan hasil fotosintesis melalui jaringan pengangkut.</p><div class="card-bottom"><span>⏱ 11 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="sel" data-title="Struktur Sel Hewan dan Tumbuhan" data-keywords="membran sel inti nukleus sitoplasma mitokondria kloroplas">
+          <div class="card-art art-cell"><span class="art-emoji">🧫</span><span class="art-label">CELL BIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-cell">SEL & MIKROORGANISME</span><span class="level-tag">Kelas 7</span></div><h3>Struktur Sel Hewan dan Tumbuhan</h3><p>Jelajahi bagian-bagian sel dan fungsi setiap organelnya.</p><div class="card-bottom"><span>⏱ 15 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+        <article class="material-card" data-category="sel" data-title="Mengenal Bakteri" data-keywords="bakteri prokariotik dinding sel flagela mikroorganisme">
+          <div class="card-art art-bacteria"><span class="art-emoji">🦠</span><span class="art-label">MICROBIOLOGY</span><span class="art-orbit"></span></div>
+          <div class="card-body"><div class="card-meta"><span class="subject-tag tag-cell">SEL & MIKROORGANISME</span><span class="level-tag">Kelas 7</span></div><h3>Mengenal Bakteri</h3><p>Kenali organisme mikroskopis bersel satu dan perannya di alam.</p><div class="card-bottom"><span>⏱ 9 menit</span><button class="open-material">Pelajari <b>→</b></button></div></div>
+        </article>
+      </section>
+
+      <div class="no-results" id="noResults" hidden><span>🔎</span><h3>Materi belum ditemukan</h3><p>Coba kata kunci lain atau pilih kategori yang berbeda.</p><button id="resetFilters">Tampilkan semua materi</button></div>
+      <footer class="footer"><span>© 2026 BIOVIA · Biology Virtual Interactive Application</span><span>Belajar, Jelajahi, Temukan ✦</span></footer>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal-backdrop" id="materialModal" aria-hidden="true">
+  <section class="material-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="closeModal" aria-label="Tutup">×</button>
+    <div class="modal-art" id="modalArt">🧬</div>
+    <span class="subject-tag tag-human" id="modalCategory">BIOLOGI</span>
+    <h2 id="modalTitle">Judul Materi</h2>
+    <p id="modalDescription"></p>
+    <div class="modal-info"><span>📖 Materi pembelajaran</span><span>⏱ Estimasi 10–15 menit</span><span>🎯 Tingkat SMP</span></div>
+    <div class="modal-learning"><strong>Yang akan kamu pelajari</strong><ul><li>Struktur atau bagian utama objek biologi.</li><li>Fungsi setiap bagian dan hubungan antarbagian.</li><li>Contoh penerapannya dalam kehidupan sehari-hari.</li></ul></div>
+    <div class="modal-actions"><button class="modal-secondary" id="closeModalBottom">Kembali</button><button class="modal-primary" id="startMaterial">Mulai Pelajari <span>→</span></button></div>
+  </section>
+</div>
+<script src="jelajahi.js"></script>
+</body>
+</html>

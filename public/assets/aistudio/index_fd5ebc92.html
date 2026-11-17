@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b50">
+  <title>BIOVIA — Jelajahi Materi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="jelajahi.css">
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="index.html" aria-label="BIOVIA beranda">
+      <span class="brand-mark"><span class="brand-dot"></span><span class="brand-leaf">✳</span></span>
+      <span class="brand-name">BIO<span>VIA</span><small>VIRTUAL BIOLOGY LAB</small></span>
+    </a>
+    <div class="nav-caption">MENU UTAMA</div>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a class="nav-link" href="index.html"><span class="nav-icon">⌂</span><span>Dashboard</span></a>
+      <a class="nav-link" href="jelajahi.html"><span class="nav-icon">▤</span><span>Jelajahi Materi</span></a>
+      <a class="nav-link" href="#" data-coming="Laboratorium 3D"><span class="nav-icon">◉</span><span>Laboratorium 3D</span><span class="nav-arrow">›</span></a>
+      <a class="nav-link" href="#" data-coming="Simulasi"><span class="nav-icon">⌁</span><span>Simulasi</span></a>
+      <a class="nav-link" href="#" data-coming="Game Edukasi"><span class="nav-icon">▣</span><span>Game Edukasi</span><span class="nav-badge">4</span></a>
+      <a class="nav-link" href="#" data-coming="Kuis & Evaluasi"><span class="nav-icon">☷</span><span>Kuis & Evaluasi</span></a>
+    </nav>
+    <div class="nav-caption second-caption">PERSONAL</div>
+    <nav class="main-nav">
+      <a class="nav-link" href="#" data-coming="Progres Belajar"><span class="nav-icon">◴</span><span>Progres Belajar</span></a>
+      <a class="nav-link" href="#" data-coming="Pencapaian"><span class="nav-icon">◇</span><span>Pencapaian</span></a>
+      <a class="nav-link" href="#" data-coming="Profil Saya"><span class="nav-icon">♙</span><span>Profil Saya</span></a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><div class="help-orbit">✦</div><strong>Butuh bantuan belajar?</strong><p>Tanyakan apa saja kepada BIOVIA AI Tutor.</p><button class="help-button" data-coming="BIOVIA AI Tutor">Tanya AI Tutor <span>↗</span></button></div>
+      <div class="sidebar-foot"><span class="status-dot"></span> BIOVIA v1.0 <span>•</span> Belajar jadi seru</div>
+    </div>
+  </aside>
+
+    <main class="main-area" id="dashboard">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Buka navigasi">☰</button>
+        <div class="breadcrumb"><span>Halaman</span><b>/</b><strong id="currentPage">Dashboard</strong></div>
+        <div class="top-actions">
+          <label class="search-box">
+            <span>⌕</span><input id="searchInput" type="search" placeholder="Cari materi, organ, atau topik..." aria-label="Cari materi">
+            <kbd>⌘ K</kbd>
+          </label>
+          <button class="icon-button notification-button" aria-label="Notifikasi" data-toast="Belum ada notifikasi baru.">♧<i></i></button>
+          <div class="profile-mini">
+            <div class="avatar">S</div>
+            <div class="profile-text"><strong>Siswa BIOVIA</strong><span>Pelajar</span></div>
+            <span class="profile-chevron">⌄</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="welcome-row">
+          <div>
+            <div class="eyebrow"><span class="eyebrow-line"></span> SENANG MELIHATMU KEMBALI</div>
+            <h1>Halo, Penjelajah! <span class="wave">✦</span></h1>
+            <p class="welcome-copy">Siap menemukan hal menakjubkan dari dunia kehidupan hari ini?</p>
+          </div>
+          <div class="date-chip"><span>◷</span><span id="todayDate">Hari ini</span></div>
+        </section>
+
+        <section class="hero-card">
+          <div class="hero-copy">
+            <div class="hero-label"><span class="sparkle">✦</span> VIRTUAL BIOLOGY EXPERIENCE</div>
+            <h2>Jelajahi kehidupan,<br><em>mulai dari sini.</em></h2>
+            <p>Kenali struktur dan fungsi makhluk hidup melalui materi interaktif, eksplorasi 3D, dan pengalaman belajar yang menyenangkan.</p>
+            <div class="hero-actions">
+              <button class="primary-button" data-scroll="#learningCategories">Mulai Jelajahi <span>→</span></button>
+              <button class="text-button" data-toast="Video perkenalan BIOVIA akan segera tersedia."><span class="play-icon">▶</span> Lihat pengenalan</button>
+            </div>
+            <div class="hero-proof"><span class="proof-avatars"><i>🧑🏻‍🔬</i><i>👩🏽‍🔬</i><i>🧑🏾‍🎓</i></span><span>Belajar sains dengan cara yang lebih seru</span></div>
+          </div>
+          <div class="hero-art" aria-label="Ilustrasi molekul dan sel 3D">
+            <div class="art-glow"></div>
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="molecule molecule-a"></div><div class="molecule molecule-b"></div>
+            <div class="cell">
+              <div class="cell-core"></div><div class="cell-nucleus"></div>
+              <span class="cell-detail detail-one"></span><span class="cell-detail detail-two"></span><span class="cell-detail detail-three"></span>
+            </div>
+            <div class="art-tag tag-top"><span class="tag-pulse"></span> BIOLOGY · 3D LAB</div>
+            <div class="art-tag tag-bottom"><span>✧</span> Explore the unseen</div>
+            <div class="floating-plus plus-one">+</div><div class="floating-plus plus-two">+</div>
+          </div>
+          <div class="hero-bottom-line"></div>
+        </section>
+
+        <section class="stats-grid" aria-label="Ringkasan progres belajar">
+          <article class="stat-card">
+            <div class="stat-icon icon-cyan">▤</div><div class="stat-info"><span>Materi dipelajari</span><strong>08 <small>/ 24</small></strong><div class="mini-progress"><i style="width:33%"></i></div></div><span class="stat-trend">+2 minggu ini</span>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon icon-purple">◷</div><div class="stat-info"><span>Waktu belajar</span><strong>3,5 <small>jam</small></strong><div class="stat-sub">Total minggu ini</div></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon icon-orange">♜</div><div class="stat-info"><span>XP terkumpul</span><strong>450 <small>XP</small></strong><div class="stat-sub">Level 3 · Penjelajah</div></div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon icon-green">◇</div><div class="stat-info"><span>Pencapaian</span><strong>05 <small>lencana</small></strong><div class="stat-sub">Terus tingkatkan!</div></div>
+          </article>
+        </section>
+
+        <section class="section-block" id="learningCategories">
+          <div class="section-heading">
+            <div><div class="eyebrow small-eyebrow">TEMUKAN DUNIA KEHIDUPAN</div><h2>Jelajahi Materi</h2><p>Pilih topik yang ingin kamu pelajari hari ini.</p></div>
+            <a href="jelajahi.html" class="view-all">Lihat semua materi <span>→</span></a>
+          </div>
+          <div class="category-grid" id="categoryGrid">
+            <article class="category-card human-card" data-search="manusia organ tubuh sistem pernapasan pencernaan jantung">
+              <div class="category-top"><span class="category-symbol">♧</span><span class="category-count">12 TOPIK</span></div>
+              <div class="category-visual human-visual"><div class="human-orb">✧</div><div class="human-shape">♟</div><span class="visual-label">HUMAN BIOLOGY</span></div>
+              <h3>Biologi Manusia</h3><p>Kenali organ dan sistem tubuh manusia.</p><div class="category-footer"><span>Mulai belajar</span><b>↗</b></div>
+            </article>
+            <article class="category-card animal-card" data-search="hewan binatang ikan burung sistem organ">
+              <div class="category-top"><span class="category-symbol">⌁</span><span class="category-count">08 TOPIK</span></div>
+              <div class="category-visual animal-visual"><div class="animal-orb">✧</div><div class="animal-shape">♧</div><span class="visual-label">ANIMAL BIOLOGY</span></div>
+              <h3>Biologi Hewan</h3><p>Pelajari keunikan struktur tubuh hewan.</p><div class="category-footer"><span>Mulai belajar</span><b>↗</b></div>
+            </article>
+            <article class="category-card plant-card" data-search="tumbuhan tanaman akar batang daun bunga fotosintesis">
+              <div class="category-top"><span class="category-symbol">❋</span><span class="category-count">10 TOPIK</span></div>
+              <div class="category-visual plant-visual"><div class="plant-orb">✧</div><div class="plant-shape">❧</div><span class="visual-label">PLANT BIOLOGY</span></div>
+              <h3>Biologi Tumbuhan</h3><p>Temukan rahasia pertumbuhan tumbuhan.</p><div class="category-footer"><span>Mulai belajar</span><b>↗</b></div>
+            </article>
+            <article class="category-card cell-card" data-search="sel mikroorganisme bakteri amoeba organel">
+              <div class="category-top"><span class="category-symbol">◎</span><span class="category-count">06 TOPIK</span></div>
+              <div class="category-visual cell-visual"><div class="cell-orb">✧</div><div class="cell-shape">◉</div><span class="visual-label">CELL & MICROBIOLOGY</span></div>
+              <h3>Sel & Mikroorganisme</h3><p>Masuk ke dunia kecil penyusun kehidupan.</p><div class="category-footer"><span>Mulai belajar</span><b>↗</b></div>
+            </article>
+          </div>
+          <div class="empty-search" id="emptySearch" hidden>Tidak ada materi yang cocok. Coba kata kunci lain, ya!</div>
+        </section>
+
+        <section class="lower-grid">
+          <div class="section-block continue-block">
+            <div class="section-heading compact-heading"><div><div class="eyebrow small-eyebrow">LANJUTKAN PERJALANANMU</div><h2>Lanjutkan Belajar</h2></div><a href="#progres" class="view-all" data-toast="Riwayat belajar akan segera tersedia.">Riwayat <span>→</span></a></div>
+            <article class="continue-card">
+              <div class="continue-thumb lung-thumb"><span class="lung-art">◉</span><span class="thumb-label">3D EXPLORATION</span></div>
+              <div class="continue-info"><span class="topic-tag">BIOLOGI MANUSIA · SISTEM PERNAPASAN</span><h3>Mengenal Struktur Paru-paru</h3><p>Pelajari bagian paru-paru dan proses pertukaran gas.</p><div class="continue-progress"><div><span>Progres materi</span><b>65%</b></div><div class="progress-track"><i style="width:65%"></i></div></div></div>
+              <button class="round-arrow" aria-label="Lanjutkan materi" data-toast="Materi Struktur Paru-paru siap dikembangkan.">→</button>
+            </article>
+          </div>
+          <aside class="challenge-card">
+            <div class="challenge-head"><span class="challenge-icon">✦</span><span>DAILY CHALLENGE</span><span class="challenge-dots">•••</span></div>
+            <div class="challenge-illustration"><div class="challenge-ring"></div><span>🧠</span><i>✧</i></div>
+            <h3>Tantangan Hari Ini</h3><p>Seberapa jauh kamu mengenal organ tubuh manusia?</p>
+            <div class="challenge-meta"><span>☷ 5 Pertanyaan</span><span>◷ 3 Menit</span></div>
+            <button class="challenge-button" data-toast="Tantangan harian akan segera tersedia.">Ikuti Tantangan <span>→</span></button>
+          </aside>
+        </section>
+
+        <section class="ai-banner">
+          <div class="ai-icon">✧</div><div><span>KENALAN DENGAN TEMAN BELAJARMU</span><h3>Punya pertanyaan tentang biologi?</h3><p>Diskusikan materi, tanyakan hal yang belum kamu pahami, dan belajar bersama AI Tutor BIOVIA.</p></div><button data-toast="BIOVIA AI Tutor akan segera hadir!">Tanya BIOVIA AI <span>↗</span></button>
+        </section>
+
+        <footer class="footer"><span>© 2026 BIOVIA · Biology Virtual Interactive Application</span><span>Belajar, Jelajahi, Temukan ✦</span></footer>
+      </div>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

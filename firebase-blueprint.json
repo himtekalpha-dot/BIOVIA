@@ -1,0 +1,242 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Public-safe student learning summary and gamification progress for BIOVIA.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Auth UID of the student.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Display name shown in the BIOVIA dashboard.",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "xp": {
+          "type": "integer",
+          "description": "Total experience points earned by completing lessons and quizzes."
+        },
+        "level": {
+          "type": "integer",
+          "description": "Current explorer level derived from XP."
+        },
+        "completedCount": {
+          "type": "integer",
+          "description": "Number of biology materials completed with passing score."
+        },
+        "dailyChallengeBestScore": {
+          "type": "integer",
+          "description": "Highest score achieved on the Daily Challenge."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the student profile was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp of the last profile update."
+        }
+      },
+      "required": [
+        "uid",
+        "displayName",
+        "xp",
+        "level",
+        "completedCount",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "UserPrivateInfo": {
+      "title": "UserPrivateInfo",
+      "description": "Isolated PII document containing the student's email address and avatar URL.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Firebase Auth UID of the owner.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Authenticated user email address.",
+          "minLength": 3,
+          "maxLength": 254
+        },
+        "photoUrl": {
+          "type": "string",
+          "description": "Optional profile avatar URL.",
+          "maxLength": 512
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when private info was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when private info was updated."
+        }
+      },
+      "required": [
+        "uid",
+        "email",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "MaterialProgress": {
+      "title": "MaterialProgress",
+      "description": "Per-material learning and quiz completion record for a student.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Owner Firebase Auth UID.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "materialSlug": {
+          "type": "string",
+          "description": "Slug identifier of the biology material.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the biology material.",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "category": {
+          "type": "string",
+          "enum": ["manusia", "hewan", "tumbuhan", "sel"],
+          "description": "Biology category identifier."
+        },
+        "bestScore": {
+          "type": "integer",
+          "description": "Highest quiz score (0 to 100)."
+        },
+        "lastScore": {
+          "type": "integer",
+          "description": "Most recent quiz score (0 to 100)."
+        },
+        "attempts": {
+          "type": "integer",
+          "description": "Total number of quiz attempts for this material."
+        },
+        "completed": {
+          "type": "boolean",
+          "description": "Whether the student passed the material quiz."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when progress record was created."
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when progress record was last updated."
+        }
+      },
+      "required": [
+        "userId",
+        "materialSlug",
+        "title",
+        "category",
+        "bestScore",
+        "lastScore",
+        "attempts",
+        "completed",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "QuizAttempt": {
+      "title": "QuizAttempt",
+      "description": "Immutable log entry for a completed quiz or daily challenge attempt.",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "Owner Firebase Auth UID.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "materialSlug": {
+          "type": "string",
+          "description": "Material slug or 'daily-challenge'.",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "materialTitle": {
+          "type": "string",
+          "description": "Human-readable title of the quiz.",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "score": {
+          "type": "integer",
+          "description": "Percentage score from 0 to 100."
+        },
+        "correctCount": {
+          "type": "integer",
+          "description": "Number of correct answers."
+        },
+        "totalQuestions": {
+          "type": "integer",
+          "description": "Total questions in the quiz."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp when the attempt was submitted."
+        }
+      },
+      "required": [
+        "userId",
+        "materialSlug",
+        "materialTitle",
+        "score",
+        "correctCount",
+        "totalQuestions",
+        "createdAt"
+      ]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "Student learning profile and XP summary owned by userId."
+    },
+    "/users/{userId}/private/{infoId}": {
+      "schema": { "$ref": "#/entities/UserPrivateInfo" },
+      "description": "Isolated PII document (email, photoUrl) accessible strictly by the owner."
+    },
+    "/users/{userId}/materialProgress/{materialSlug}": {
+      "schema": { "$ref": "#/entities/MaterialProgress" },
+      "description": "Per-material learning completion and best quiz score for a student."
+    },
+    "/users/{userId}/quizHistory/{attemptId}": {
+      "schema": { "$ref": "#/entities/QuizAttempt" },
+      "description": "Immutable quiz attempt history owned by the student."
+    }
+  }
+}
